@@ -74,22 +74,26 @@ export default class Home extends Component {
         </div>
 
         <div className="features container">
-          <div className="feature">
-            <img src={ai} alt="Artificial Intelligence" />
-            <h3>Artificial Intelligence</h3>
-            <p>Trained Artificial Intelligence to offer expert guidance to students</p>
-          </div>
+          <h1>Core features</h1>
 
-          <div className="feature">
-            <img src={monitoring} alt="Monitoring" />
-            <h3>Monitoring</h3>
-            <p>We keep track of your entire learning process to keep</p>
-          </div>
+          <div className="content">
+            <div className="feature">
+              <img src={ai} alt="Artificial Intelligence" />
+              <h3>Artificial Intelligence</h3>
+              <p>Trained Artificial Intelligence to offer expert guidance to students</p>
+            </div>
 
-          <div className="feature">
-            <img src={library} alt="Library" />
-            <h3>Library</h3>
-            <p>Huge library of high quality tutorials created by </p>
+            <div className="feature">
+              <img src={monitoring} alt="Monitoring" />
+              <h3>Monitoring</h3>
+              <p>We keep track of your entire learning process to keep</p>
+            </div>
+
+            <div className="feature">
+              <img src={library} alt="Library" />
+              <h3>Library</h3>
+              <p>Huge library of high quality tutorials created by </p>
+            </div>
           </div>
         </div>
       </div>
