@@ -101,6 +101,8 @@ export default class Home extends Component {
           </div>
         </div>
 
+        {/* // todo: add subscribe */}
+
         <Footer />
       </div>
     )
