@@ -34,7 +34,7 @@
   .available {
     text-align: center;
     margin-top: 7em;
-    color: lighten($color: #000000, $amount: 0);
+    color: rgba($color: #000000, $alpha: 0.5);
     // background-image: linear-gradient(lighten($color: #5F8FEE, $amount: 100), #5f8feec4);
 
     img.lg {
@@ -46,7 +46,7 @@
     h1 {
       margin: 2em 0;
       text-transform: uppercase;
-      color: white;
+      // color: white;
     }
 
     .download {

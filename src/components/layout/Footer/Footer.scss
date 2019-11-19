@@ -1,3 +1,32 @@
 .footer {
-  display: flex;
+  text-align: center;
+
+  .content {
+    display: flex;
+
+    h1 {
+      font-size: 170%;
+    }
+
+    p {
+      margin: 0.3em 0 1em 0;
+    }
+
+    .social {
+      display: flex;
+      a {
+        padding: 0.5em 0;
+        width: 2.3em;
+        text-align: center;
+        background-color: rgba($color: #5f8fee, $alpha: 0.2);
+        border-radius: 10px;
+        margin-right: 1em;
+      }
+
+      a:hover {
+        opacity: 1;
+        background-color: rgba($color: #5f8fee, $alpha: 0.3);
+      }
+    }
+  }
 }
