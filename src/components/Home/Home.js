@@ -12,6 +12,8 @@ import ai from '../../assets/images/ai.svg';
 import monitoring from '../../assets/images/monitoring.svg';
 import library from '../../assets/images/lib.svg';
 
+import Footer from '../layout/Footer/Footer';
+
 export default class Home extends Component {
   render() {
     return (
@@ -96,6 +98,8 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+
+        <Footer />
       </div>
     )
   }
