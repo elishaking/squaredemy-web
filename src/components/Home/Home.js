@@ -17,11 +17,11 @@ export default class Home extends Component {
               The Most Productive Way To Learn
             </h1>
 
-            <p>A well-informed Artificial Intelligence expert named Squaredbot. built to make learning fun and interactive. </p>
+            <p className="lead">A well-informed Artificial Intelligence expert named Squaredbot. built to make learning fun and interactive. </p>
 
             <div className="action">
-              <a href="#more">Get Squaredemy</a>
-              <a href="#testing">Join</a>
+              <a className="fill" href="#more">Get Squaredemy</a>
+              <a className="outline" href="#testing">Join</a>
             </div>
           </div>
 

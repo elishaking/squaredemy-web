@@ -5,8 +5,25 @@
 a {
   text-decoration: none;
   transition: 0.3s ease-in-out;
+  text-transform: uppercase;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
+}
+
+a.fill {
+  background-color: #5F8FEE;
+  color: white;
+  margin-right: 1em;
+}
+
+a.outline {
+  border: 1px solid #5F8FEE;
+  color: #5F8FEE;
+}
+
+p.lead {
+  font-size: 130%;
+  color: #757575;
 }
