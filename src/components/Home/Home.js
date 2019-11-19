@@ -4,6 +4,8 @@ import './Home.scss';
 import Navbar from '../layout/Navbar/Navbar';
 
 import dashboard from '../../assets/images/dashboard.svg'
+import available from '../../assets/images/available.svg'
+import gPlay from '../../assets/images/g-play.svg'
 
 export default class Home extends Component {
   render() {
@@ -28,6 +30,12 @@ export default class Home extends Component {
           <div className="right">
             <img src={dashboard} alt="Squaredemy Dashboard" />
           </div>
+        </div>
+
+        <div className="available container">
+          <img src={available} alt="Available for Download" />
+          <h1 className="headline">Beta available for Download on Android</h1>
+          <a href="download"><img src={gPlay} alt="Google Play Download" /></a>
         </div>
       </div>
     )
