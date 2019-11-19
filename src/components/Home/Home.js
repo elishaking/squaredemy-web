@@ -8,6 +8,9 @@ import available from '../../assets/images/available.svg';
 import gPlay from '../../assets/images/g-play.svg';
 import squaredbot from '../../assets/images/squaredbot.svg';
 import smartBg from '../../assets/images/smart-bg.svg';
+import ai from '../../assets/images/ai.svg';
+import monitoring from '../../assets/images/monitoring.svg';
+import library from '../../assets/images/lib.svg';
 
 export default class Home extends Component {
   render() {
@@ -68,6 +71,26 @@ export default class Home extends Component {
           <h1>Simple and Smart</h1>
           <a href="#testing" className="fill-white">Join</a>
           <img className="bg" src={smartBg} alt="" />
+        </div>
+
+        <div className="features container">
+          <div className="feature">
+            <img src={ai} alt="Artificial Intelligence" />
+            <h3>Artificial Intelligence</h3>
+            <p>Trained Artificial Intelligence to offer expert guidance to students</p>
+          </div>
+
+          <div className="feature">
+            <img src={monitoring} alt="Monitoring" />
+            <h3>Monitoring</h3>
+            <p>We keep track of your entire learning process to keep</p>
+          </div>
+
+          <div className="feature">
+            <img src={library} alt="Library" />
+            <h3>Library</h3>
+            <p>Huge library of high quality tutorials created by </p>
+          </div>
         </div>
       </div>
     )
