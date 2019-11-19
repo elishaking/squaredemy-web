@@ -29,8 +29,8 @@ export default class Home extends Component {
             <p className="lead">A well-informed Artificial Intelligence expert named Squaredbot. built to make learning fun and interactive. </p>
 
             <div className="action">
-              <a className="fill" href="#more">Get Squaredemy</a>
-              <a className="outline" href="#testing">Join</a>
+              <a className="btn fill" href="#more">Get Squaredemy</a>
+              <a className="btn outline" href="#testing">Join</a>
             </div>
           </div>
 
@@ -42,7 +42,9 @@ export default class Home extends Component {
         <div className="available container">
           <img className="lg" src={available} alt="Available for Download" />
           <h1>Beta available for Download on Android</h1>
-          <a className="download" href="download"><img src={gPlay} alt="Google Play Download" /></a>
+          <a href="https://play.google.com/store/apps/details?id=skyblazar.com.squaredemy" className="download">
+            <img src={gPlay} alt="Google Play Download" />
+          </a>
         </div>
 
         <div className="squaredbot container">
@@ -65,13 +67,13 @@ export default class Home extends Component {
 
           <h3>I need your help</h3>
 
-          <a href="how" className="fill-white">How <span>🤔🤔</span></a>
+          <a href="#testing" className="btn fill-white">How <span>🤔🤔</span></a>
         </div>
 
         <div className="smart container">
           <img className="simple" src={squaredbot} alt="Simple and Smart" />
           <h1>Simple and Smart</h1>
-          <a href="#testing" className="fill-white">Join</a>
+          <a href="#testing" className="btn fill-white">Join</a>
           <img className="bg" src={smartBg} alt="" />
         </div>
 
