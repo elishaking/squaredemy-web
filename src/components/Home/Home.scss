@@ -35,7 +35,7 @@
     text-align: center;
     margin-top: 7em;
     color: lighten($color: #000000, $amount: 0);
-    background-image: linear-gradient(lighten($color: #5F8FEE, $amount: 100), #5f8feec4);
+    // background-image: linear-gradient(lighten($color: #5F8FEE, $amount: 100), #5f8feec4);
 
     img.lg {
       width: 80vw;
@@ -60,7 +60,8 @@
 
   .squaredbot {
     text-align: center;
-    background-image: linear-gradient(#5f8feec4, #5F8FEE);
+    // background-image: linear-gradient(#5f8feec4, #5F8FEE);
+    background-color: #5F8FEE;
     color: white;
 
     svg {
@@ -110,6 +111,19 @@
 
     a span {
       margin-left: 1em;
+    }
+  }
+
+  .smart {
+    text-align: center;
+
+    img {
+      height: 100vh;
+      max-height: 700px;
+    }
+
+    h1 {
+      margin: 1em 0;
     }
   }
 }

@@ -3,9 +3,10 @@ import './Home.scss';
 
 import Navbar from '../layout/Navbar/Navbar';
 
-import dashboard from '../../assets/images/dashboard.svg'
-import available from '../../assets/images/available.svg'
-import gPlay from '../../assets/images/g-play.svg'
+import dashboard from '../../assets/images/dashboard.svg';
+import available from '../../assets/images/available.svg';
+import gPlay from '../../assets/images/g-play.svg';
+import squaredbot from '../../assets/images/squaredbot.svg';
 
 export default class Home extends Component {
   render() {
@@ -59,6 +60,12 @@ export default class Home extends Component {
           <h3>I need your help</h3>
 
           <a href="how" className="fill-white">How <span>🤔🤔</span></a>
+        </div>
+
+        <div className="smart container">
+          <img src={squaredbot} alt="Simple and Smart" />
+          <h1>Simple and Smart</h1>
+          <a href="#testing" className="fill">Join</a>
         </div>
       </div>
     )
