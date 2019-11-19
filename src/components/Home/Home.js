@@ -3,12 +3,32 @@ import './Home.scss';
 
 import Navbar from '../layout/Navbar/Navbar';
 
+import dashboard from '../../assets/images/dashboard.svg'
+
 export default class Home extends Component {
   render() {
     return (
       <div className="home">
         <Navbar />
-        <h1>Hello</h1>
+
+        <div className="main container">
+          <div className="left">
+            <h1 className="headline">
+              The Most Productive Way To Learn
+            </h1>
+
+            <p>A well-informed Artificial Intelligence expert named Squaredbot. built to make learning fun and interactive. </p>
+
+            <div className="action">
+              <a href="#more">Get Squaredemy</a>
+              <a href="#testing">Join</a>
+            </div>
+          </div>
+
+          <div className="right">
+            <img src={dashboard} alt="Squaredemy Dashboard" />
+          </div>
+        </div>
       </div>
     )
   }
