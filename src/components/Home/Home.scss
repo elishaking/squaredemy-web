@@ -36,4 +36,30 @@
       }
     }
   }
+
+  .available {
+    text-align: center;
+    margin-top: 7em;
+    color: lighten($color: #000000, $amount: 0);
+    background-image: linear-gradient(lighten($color: #5F8FEE, $amount: 100), #5F8FEE);
+
+    img.lg {
+      width: 80vw;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      margin: 2em 0;
+      color: white;
+    }
+
+    .download {
+      img {
+        max-height: 70px;
+        width: 80vw;
+        max-width: 300px;
+      }
+    }
+  }
 }

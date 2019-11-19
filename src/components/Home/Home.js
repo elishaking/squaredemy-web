@@ -33,9 +33,9 @@ export default class Home extends Component {
         </div>
 
         <div className="available container">
-          <img src={available} alt="Available for Download" />
-          <h1 className="headline">Beta available for Download on Android</h1>
-          <a href="download"><img src={gPlay} alt="Google Play Download" /></a>
+          <img className="lg" src={available} alt="Available for Download" />
+          <h1>Beta available for Download on Android</h1>
+          <a className="download" href="download"><img src={gPlay} alt="Google Play Download" /></a>
         </div>
       </div>
     )
