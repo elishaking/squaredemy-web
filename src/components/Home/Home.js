@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './Home.scss';
 
 import Navbar from '../layout/Navbar/Navbar';
@@ -26,7 +27,28 @@ export default class Home extends Component {
 
   subscribeUser = (e) => {
     e.preventDefault();
-    this.setState({ loading: true, email: '' });
+
+    axios.post("https://api.squaredemy.skyblazar.com/subscribe",
+      { email: this.state.email })
+      .then((data) => {
+        this.setState({ loading: false, email: '' });
+      })
+      .catch((err) => {
+        this.setState({ loading: false, email: '' });
+      });
+
+    // fetch("https://api.squaredemy.skyblazar.com/subscribe", {
+    //   method: "POST",
+    //   headers: "Content-Type: application/json",
+    //   body: JSON.stringify({ email: this.state.email }),
+    //   mode: "no-cors"
+    // })
+    //   .then((res) => res.json().then((data) => {
+    //     this.setState({ loading: false, email: '' });
+    //   }))
+    //   .catch((err) => {
+    //     this.setState({ loading: false, email: '' });
+    //   });
   };
 
   render() {
