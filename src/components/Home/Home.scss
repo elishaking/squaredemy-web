@@ -18,6 +18,7 @@
 
       a.fill {
         margin-right: 1em;
+        margin-bottom: 1em;
       }
     }
 
@@ -79,18 +80,15 @@
         margin-bottom: 1.3em;
         background-color: white;
         color: #5F8FEE;
-        padding: 1em 2em;
+        padding: 0.5em 1em;
         width: fit-content;
       }
     }
 
     h1,
     p {
-      border-radius: 100px;
-      -webkit-border-radius: 100px;
-      -moz-border-radius: 100px;
-      -ms-border-radius: 100px;
-      -o-border-radius: 100px;
+      font-weight: normal;
+      border-radius: 10px;
     }
 
     p {
