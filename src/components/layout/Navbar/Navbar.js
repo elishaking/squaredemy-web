@@ -10,8 +10,7 @@ export default class Navbar extends Component {
   toggleMobileNav = (e) => {
     this.setState({ mobileNavActive: !this.state.mobileNavActive }, () => {
       setTimeout(() => {
-        document.getElementById("links").style.transform =
-          this.state.mobileNavActive ? "translateX(0)" : "translateX(100%)";
+        document.getElementById("links").classList.toggle("active-m");
       }, 10);
     });
   };

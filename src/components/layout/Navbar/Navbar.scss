@@ -69,6 +69,11 @@
 
     ul.active {
       display: flex;
+      font-size: 130%;
+    }
+
+    ul.active-m {
+      transform: translateX(0);
     }
 
     #menu-icon {
