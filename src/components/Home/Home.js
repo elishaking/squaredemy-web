@@ -18,7 +18,8 @@ import Footer from '../layout/Footer/Footer';
 export default class Home extends Component {
   state = {
     email: '',
-    loading: false
+    loading: false,
+    errors: {}
   };
 
   onChange = (e) => {
@@ -28,8 +29,17 @@ export default class Home extends Component {
   subscribeUser = (e) => {
     e.preventDefault();
 
+    const { email } = this.state;
+    const { isValid, errors } = this.validateSubscribeInput({ email });
+
+    this.setState({ errors });
+
+    if (!isValid) return;
+
+    this.setState({ loading: true });
+
     axios.post("https://api.squaredemy.skyblazar.com/subscribe",
-      { email: this.state.email })
+      { email })
       .then((data) => {
         this.setState({ loading: false, email: '' });
       })
@@ -51,6 +61,22 @@ export default class Home extends Component {
     //   });
   };
 
+  validateSubscribeInput = (data) => {
+    const errors = {};
+
+    if (data.email.length === 0)
+      errors.email = "email is required";
+    else if (data.email.length > 40)
+      errors.email = "email should have less than 40 characters";
+    else if (!new RegExp(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/).test(data.email))
+      errors.email = "Please enter a valid email";
+
+    return {
+      isValid: Object.keys(errors).length === 0,
+      errors
+    };
+  };
+
   scrollPage = (e) => {
     e.preventDefault();
 
@@ -63,7 +89,7 @@ export default class Home extends Component {
   };
 
   render() {
-    const { email, loading } = this.state;
+    const { email, loading, errors } = this.state;
 
     return (
       <div className="home">
@@ -153,7 +179,10 @@ export default class Home extends Component {
         <div id="subscribe" className="subscribe container">
           <h1>Join the email Squad</h1>
           <form id="subscribe-form" onSubmit={this.subscribeUser}>
-            <input type="text" placeholder="email" value={email} onChange={this.onChange} />
+            <div className="input">
+              <input className={`${errors.email ? "error" : ""}`} type="text" placeholder="email" value={email} onChange={this.onChange} />
+              {errors.email && (<small>{errors.email}</small>)}
+            </div>
             {
               loading ? (
                 <span>

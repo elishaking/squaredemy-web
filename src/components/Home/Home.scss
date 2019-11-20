@@ -187,12 +187,26 @@
     }
 
     #subscribe-form {
+      .input {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      input[type=submit],
+      small {
+        margin: 1em;
+      }
+
+      small {
+        color: red;
+      }
+
       input {
         padding: 1em 2em;
         font-family: inherit;
         border-radius: 100px;
         outline: none;
-        margin: 1em;
       }
 
       input[type=text] {
@@ -201,8 +215,16 @@
         max-width: 400px;
       }
 
+      input[type=text].error {
+        border: 1px solid red;
+      }
+
       ::placeholder {
         color: #5F8FEE;
+      }
+
+      input[type=text].error::placeholder {
+        color: red;
       }
 
       input[type=submit] {
