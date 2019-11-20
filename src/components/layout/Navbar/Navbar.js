@@ -5,7 +5,7 @@ import './Navbar.scss';
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar container">
+      <nav className="navbar container-nav">
         <h1 className="logo">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.13em" height="1em" viewBox="0 0 53 46.984">
             <g id="Group_604" data-name="Group 604" transform="translate(-658.05 -174.77)">

@@ -3,7 +3,7 @@ import './Footer.scss';
 
 export default function Footer({ bg = "#fff" }) {
   return (
-    <footer style={{ color: bg === "#fff" ? "#000" : "#fff" }} className="footer container">
+    <footer style={{ color: bg === "#fff" ? "#000" : "#fff" }} className="footer container-nav">
       <div className="content">
         <div className="left">
           <h1 className="logo">
