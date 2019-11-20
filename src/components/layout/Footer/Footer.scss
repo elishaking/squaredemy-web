@@ -12,23 +12,25 @@
 
     p {
       margin: 0.3em 0 1em 0;
+      text-align: left;
     }
 
     .social {
       display: flex;
+      margin-bottom: 1em;
 
       a {
         padding: 0.5em 0;
         width: 2.3em;
         text-align: center;
-        background-color: rgba($color: #5f8fee, $alpha: 0.2);
+        background-color: #87b0ff;
         border-radius: 10px;
-        margin-right: 1em;
+        margin-right: 3em;
       }
 
       a:hover {
         opacity: 1;
-        background-color: rgba($color: #5f8fee, $alpha: 0.3);
+        background-color: #6c9eff;
       }
     }
   }
