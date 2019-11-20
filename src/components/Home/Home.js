@@ -15,7 +15,23 @@ import library from '../../assets/images/lib.svg';
 import Footer from '../layout/Footer/Footer';
 
 export default class Home extends Component {
+  state = {
+    email: '',
+    loading: false
+  };
+
+  onChange = (e) => {
+    this.setState({ email: e.target.value });
+  };
+
+  subscribeUser = (e) => {
+    e.preventDefault();
+    this.setState({ loading: true, email: '' });
+  };
+
   render() {
+    const { email, loading } = this.state;
+
     return (
       <div className="home">
         <Navbar />
@@ -102,9 +118,20 @@ export default class Home extends Component {
         </div>
 
         <div className="subscribe container">
-          <form id="subscribe-form">
-            <input type="text" placeholder="email" />
-            <input type="submit" value="Subscribe" />
+          <form id="subscribe-form" onSubmit={this.subscribeUser}>
+            <input type="text" placeholder="email" value={email} onChange={this.onChange} />
+            {
+              loading ? (
+                <span>
+                  <svg id="loader" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 34 34">
+                    <g id="Ellipse_9" data-name="Ellipse 9" fill="none" stroke="#4475e6" stroke-width="7">
+                      <circle cx="17" cy="17" r="17" stroke="none" />
+                      <circle cx="17" cy="17" r="13.5" fill="none" />
+                    </g>
+                  </svg>
+                </span>
+              ) : (<input type="submit" value="Subscribe" />)
+            }
           </form>
         </div>
 
