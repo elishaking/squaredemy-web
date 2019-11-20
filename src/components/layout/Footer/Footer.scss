@@ -1,5 +1,7 @@
 .footer {
   text-align: center;
+  color: white;
+  background-color: #5f8fee;
 
   .content {
     display: flex;
@@ -14,6 +16,7 @@
 
     .social {
       display: flex;
+
       a {
         padding: 0.5em 0;
         width: 2.3em;
