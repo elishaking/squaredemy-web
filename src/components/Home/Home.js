@@ -64,7 +64,7 @@ export default class Home extends Component {
               The Most Productive Way To Learn
             </h1>
 
-            <p className="lead">A well-informed Artificial Intelligence expert named Squaredbot. built to make learning fun and interactive. </p>
+            <p className="lead">Squaredemy is an AI-driven learning platform that enhances learning productivity through customized curriculums that are generated based on fun and engaging interactions with the user</p>
 
             <div className="action">
               <a className="btn fill" href="#more">Get Squaredemy</a>
