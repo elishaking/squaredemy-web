@@ -51,6 +51,17 @@ export default class Home extends Component {
     //   });
   };
 
+  scrollPage = (e) => {
+    e.preventDefault();
+
+    console.log(e.target.href);
+
+    window.scrollTo({
+      behavior: "smooth",
+      top: document.getElementById(e.target.href.split("#")[1]).offsetTop
+    });
+  };
+
   render() {
     const { email, loading } = this.state;
 
@@ -67,8 +78,8 @@ export default class Home extends Component {
             <p className="lead">Squaredemy is an AI-driven learning platform that enhances learning productivity through customized curriculums that are generated based on fun and engaging interactions with the user</p>
 
             <div className="action">
-              <a className="btn fill" href="#more">Get Squaredemy</a>
-              <a className="btn outline" href="#testing">Join</a>
+              <a className="btn fill" href="#available" onClick={this.scrollPage}>Get Squaredemy</a>
+              <a className="btn outline" href="#subscribe" onClick={this.scrollPage}>Join</a>
             </div>
           </div>
 
@@ -77,9 +88,9 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <div className="available container">
+        <div id="available" className="available container">
           <img className="lg" src={available} alt="Available for Download" />
-          <h1>Beta available for Download on Android</h1>
+          <h1><span>Beta</span> available for Download on Android</h1>
           <a href="https://play.google.com/store/apps/details?id=skyblazar.com.squaredemy" className="download">
             <img src={gPlay} alt="Google Play Download" />
           </a>
@@ -139,7 +150,8 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <div className="subscribe container">
+        <div id="subscribe" className="subscribe container">
+          <h1>Join the email Squad</h1>
           <form id="subscribe-form" onSubmit={this.subscribeUser}>
             <input type="text" placeholder="email" value={email} onChange={this.onChange} />
             {

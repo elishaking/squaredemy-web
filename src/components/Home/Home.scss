@@ -50,6 +50,10 @@
       margin: 2em 0;
       text-transform: uppercase;
       // color: white;
+
+      span {
+        color: #5F8FEE;
+      }
     }
 
     .download {
@@ -176,6 +180,11 @@
 
   .subscribe {
     text-align: center;
+
+    h1 {
+      color: #757575;
+      margin-bottom: 1em;
+    }
 
     #subscribe-form {
       input {
