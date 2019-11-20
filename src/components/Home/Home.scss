@@ -225,6 +225,12 @@
       }
     }
   }
+
+  @media (max-width: 700px) {
+    .smart img.bg {
+      width: fit-content;
+    }
+  }
 }
 
 @keyframes loading {

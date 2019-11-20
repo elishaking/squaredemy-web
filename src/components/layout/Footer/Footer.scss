@@ -32,4 +32,8 @@
       }
     }
   }
+
+  p a {
+    color: darken($color: #607D8B, $amount: 30);
+  }
 }

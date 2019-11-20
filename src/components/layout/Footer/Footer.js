@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <p>Copyright &copy; <a href="https://skyblazar.com">Skyblazar</a>, All Rights Reserved</p>
+      <p>Copyright &copy; <a href="https://skyblazar.com">Skyblazar</a>,&nbsp;&nbsp;All Rights Reserved</p>
     </footer>
   )
 }

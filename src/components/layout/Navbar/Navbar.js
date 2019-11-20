@@ -32,9 +32,10 @@ export default class Navbar extends Component {
 
         <ul id="links" className={`${mobileNavActive ? "active" : ""}`}>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li><a href="https://skyblazar.com#services" target="_blank" rel="noopener noreferrer">About</a></li>
           <li><Link to="/faq">FAQ</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          {/* <li><a href="mailto:skyblazar.cc@gmail.com?subject=Squaredemy Enquiry" target="_blank" rel="noopener noreferrer">Contact</a></li> */}
+          <li><a href="https://skyblazar.com#contact" target="_blank" rel="noopener noreferrer">Contact</a></li>
         </ul>
 
         <div id="menu-icon" className={`${mobileNavActive ? "active" : ""}`} onClick={this.toggleMobileNav}>
