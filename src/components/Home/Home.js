@@ -101,7 +101,12 @@ export default class Home extends Component {
           </div>
         </div>
 
-        {/* // todo: add subscribe */}
+        <div className="subscribe container">
+          <form id="subscribe-form">
+            <input type="text" placeholder="email" />
+            <input type="submit" value="Subscribe" />
+          </form>
+        </div>
 
         <Footer />
       </div>
