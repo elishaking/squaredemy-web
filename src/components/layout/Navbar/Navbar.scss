@@ -16,4 +16,63 @@
       }
     }
   }
+
+  #menu-icon {
+    display: none;
+    z-index: 10;
+
+    div {
+      width: 23px;
+      height: 2px;
+      background-color: black;
+      border-radius: 10px;
+      margin-bottom: 4px;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  #menu-icon.active {
+    .line1 {
+      transform: rotate(45deg) translateY(8px);
+    }
+
+    .line2 {
+      opacity: 0;
+    }
+
+    .line3 {
+      transform: rotate(-45deg) translateY(-8px);
+      ;
+    }
+  }
+
+  @media (max-width: 760px) {
+    ul {
+      position: absolute;
+      display: none;
+      transform: translateX(100%);
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: lighten($color: #5F8FEE, $amount: 20);
+      font-weight: bold;
+      transition: 0.3s ease-in-out;
+
+      li {
+        margin-left: 0;
+      }
+    }
+
+    ul.active {
+      display: flex;
+    }
+
+    #menu-icon {
+      display: block;
+    }
+  }
 }

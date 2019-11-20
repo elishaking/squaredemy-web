@@ -3,7 +3,22 @@ import { Link } from 'react-router-dom';
 import './Navbar.scss';
 
 export default class Navbar extends Component {
+  state = {
+    mobileNavActive: false
+  }
+
+  toggleMobileNav = (e) => {
+    this.setState({ mobileNavActive: !this.state.mobileNavActive }, () => {
+      setTimeout(() => {
+        document.getElementById("links").style.transform =
+          this.state.mobileNavActive ? "translateX(0)" : "translateX(100%)";
+      }, 10);
+    });
+  };
+
   render() {
+    const { mobileNavActive } = this.state;
+
     return (
       <nav className="navbar container-nav">
         <h1 className="logo">
@@ -16,12 +31,18 @@ export default class Navbar extends Component {
           <span>Squaredemy</span>
         </h1>
 
-        <ul>
+        <ul id="links" className={`${mobileNavActive ? "active" : ""}`}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/faq">FAQ</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
+
+        <div id="menu-icon" className={`${mobileNavActive ? "active" : ""}`} onClick={this.toggleMobileNav}>
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
+        </div>
       </nav>
     )
   }

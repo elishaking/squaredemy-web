@@ -20,7 +20,7 @@ export default class Home extends Component {
       <div className="home">
         <Navbar />
 
-        <div className="main container">
+        <div className="main container-nav">
           <div className="left">
             <h1 className="headline">
               The Most Productive Way To Learn
@@ -67,7 +67,7 @@ export default class Home extends Component {
 
           <h3>I need your help</h3>
 
-          <a href="#testing" className="btn fill-white">How <span>🤔🤔</span></a>
+          <a href="#testing" className="btn fill-white">How <span role="img" aria-label="how">🤔🤔</span></a>
         </div>
 
         <div className="smart container">
