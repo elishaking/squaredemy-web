@@ -17,8 +17,11 @@
       }
 
       a.fill {
-        margin-right: 1em;
         margin-bottom: 1em;
+      }
+
+      a.outline {
+        margin: 0 1em;
       }
     }
 
@@ -114,10 +117,13 @@
   .smart {
     text-align: center;
     position: relative;
+    overflow: hidden;
 
     img.simple {
       height: 100vh;
       max-height: 700px;
+      width: 80vw;
+      max-width: 700px;
     }
 
     h1 {
@@ -182,7 +188,7 @@
 
       input[type=text] {
         border: 1px solid #5F8FEE;
-        width: 80vw;
+        width: 70vw;
         max-width: 400px;
       }
 
@@ -229,6 +235,18 @@
   @media (max-width: 700px) {
     .smart img.bg {
       width: fit-content;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .main {
+      .left {
+        text-align: center;
+
+        a.fill {
+          margin-right: 0;
+        }
+      }
     }
   }
 }

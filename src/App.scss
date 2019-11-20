@@ -9,6 +9,7 @@
 h1.logo {
   display: flex;
   align-items: center;
+  color: #757575;
   // text-transform: uppercase;
 
   svg {
@@ -69,4 +70,10 @@ h1.headline {
 p.lead {
   font-size: 130%;
   color: #757575;
+}
+
+@media (max-width: 430px) {
+  h1.headline {
+    font-size: 300%;
+  }
 }
